@@ -1,11 +1,11 @@
 <template>
     <div class="container" id="actual">
-        {{checkGabinete(id)}}
+        {{                  checkGabinete(id)                  }}
         <!-- Mostrar solo en pantallas grandes  -->
         <div class="d-none d-md-block">
             <div class="row text-center" style="  font-family: 'Trebuchet MS', sans-serif; ">
                 <div class="col-6" style=" color:white; background-color:#686866; border-radius: 15px 15px 0px 0px;">
-                    <h3 style="margin-top:10px; font-weight: bold; ">S.E. {{actualSub}} Gabinete: {{actualRack}} </h3>
+                    <h3 style="margin-top:10px; font-weight: bold; ">S.E. {{                  actualSub                  }} Gabinete: {{                  actualRack                  }} </h3>
                 </div>
             </div>
 
@@ -19,7 +19,7 @@
                             <div class="row"
                                 style="background-color:#2C3333; color:white; width: 99%; margin-left: 0px; border-radius: 10px; ">
                                 <h5 style="margin-left:5px;">
-                                    {{device.PGabinete}}
+                                    {{                  device.PGabinete                  }}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-distribute-vertical" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
@@ -28,8 +28,8 @@
                                             d="M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7z" />
                                     </svg>
 
-                                    {{device.Marca}}
-                                    {{device.NombreEquipo}}
+                                    {{                  device.Marca                  }}
+                                    {{                  device.NombreEquipo                  }}
                                 </h5>
                             </div>
                             <div class="row">
@@ -52,14 +52,14 @@
         <div class="d-md-none ">
 
             <div class="text-center" style=" color:white; background-color:#686866; border-radius: 15px 15px 0px 0px;">
-                <label for="">S.E. {{actualSub}} {{actualRack}}</label>
+                <label for="">S.E. {{                  actualSub                  }} {{                  actualRack                  }}</label>
             </div>
             <div class="col-12" id="fondo">
                 <ul class="list-group" v-for="(device, key ) in listaEquipos" :key="key">
                     <li class="list-group-item" @click="showFicha(device.R3)">
                         <div class="row" style="background-color:#2C3333; color:white;  border-radius: 5px;">
-                            <label style="margin-left:5px"> {{device.PGabinete}} - {{device.Marca}}
-                                {{device.NombreEquipo}} </label>
+                            <label style="margin-left:5px"> {{                  device.PGabinete                  }} - {{                  device.Marca                  }}
+                                {{                  device.NombreEquipo                  }} </label>
                         </div>
                         <div class="row">
                             <img v-if="device.Img" style=" width:100%; "
@@ -101,7 +101,9 @@ export default {
                         {
                             nombre: 'A2',
                             idGabinete: 2,
-                            equipos: []
+                            equipos: [
+                            {  R3: "100", id: 1, UGabinete:"A02", PGabinete:"01" ,TipoId: 7 , Marca:"ODF", Tipo:"T-DISTOPT", NombreEquipo:"GTAC", Img: 'gtag.png' }
+                            ]
                         },
                         {
                             nombre: 'A3',
@@ -118,7 +120,7 @@ export default {
                                 { R3: "2195455", id: 1, UGabinete: "A4", PGabinete: 37, TipoId: 1, Marca: "CISCO", Tipo: "T-ROUTER", NombreEquipo: "ASR-903", Img: "cisco-asr903.png" },
                                 { R3: "766900", id: 2, UGabinete: "A4", PGabinete: 33, TipoId: 1, Marca: "CISCO", Tipo: "T-ROUTER", NombreEquipo: "3945", Img: "cisco-3945.png" },
                                 { R3: "1416759", id: 3, UGabinete: "A4", PGabinete: 29, TipoId: 2, Marca: "CISCO", Tipo: "T-SWITCH", NombreEquipo: "3560", Img: "cisco-3560.png" },
-                                { R3: "0", id: 4, UGabinete: "A4", PGabinete: 24, TipoId: 3, Marca: "CISCO", Tipo: "T-PP", NombreEquipo: "PatchPanel", Img: "patchpanel2.png" }
+                                // { R3: "0", id: 4, UGabinete: "A4", PGabinete: 24, TipoId: 3, Marca: "CISCO", Tipo: "T-PP", NombreEquipo: "PatchPanel", Img: "patchpanel2.png" }
                             ]
                         },
                         {
@@ -157,19 +159,21 @@ export default {
                             nombre: 'A31',
                             idGabinete: 31,
                             equipos: [
-                                { R3: "1515348", id: 1, UGabinete: "A31", PGabinete: "1", TipoId: 7, Marca: "FC", Tipo: "T-DISTOPT", NombreEquipo: "CANCUN",Img: "odf-fc.png" }
+                                { R3: "1515348", id: 1, UGabinete: "A31", PGabinete: "1", TipoId: 7, Marca: "FC", Tipo: "T-DISTOPT", NombreEquipo: "CANCUN", Img: "odf-fc.png" }
                             ]
                         },
                         {
                             nombre: 'A33',
                             idGabinete: 33,
-                            equipos: []
+                            equipos: [
+                                { R3: "21619", "id": 1, UGabinete: "A33", PGabinete: "01", TipoId: 9, Marca: "NIZ-PMO-ZH", Tipo: "T-TOPTICA", NombreEquipo: "FOX 515", Img: 'Fox.png' }
+                            ]
                         },
                         {
                             nombre: 'B2',
                             idGabinete: 35,
                             equipos: [
-                                { R3: "2195453", id: 1, UGabinete: "B2", PGabinete: "1", TipoId: 7, Marca: "FC", Tipo: "T-DISTOPT", NombreEquipo: "BONFIL" , Img: "odf-fc.png"},
+                                { R3: "2195453", id: 1, UGabinete: "B2", PGabinete: "1", TipoId: 7, Marca: "FC", Tipo: "T-DISTOPT", NombreEquipo: "BONFIL", Img: "odf-fc.png" },
                                 { R3: "1515070", id: 2, UGabinete: "B2", PGabinete: "2", TipoId: 7, Marca: "FC", Tipo: "T-DISTOPT", NombreEquipo: "PUERTO MORELOS", Img: "odf-fc.png" },
                                 { R3: "2195457", id: 3, UGabinete: "B2", PGabinete: "3", TipoId: 7, Marca: "FC", Tipo: "T-DISTOPT", NombreEquipo: "NICTE HA", Img: "odf-fc.png" }
                             ]
@@ -188,15 +192,17 @@ export default {
                             nombre: 'B4',
                             idGabinete: 37,
                             equipos: [
-                                { R3: "1515067", id: 1, UGabinete: "B4", PGabinete: "1", TipoId: 7, Marca: "SC", Tipo: "T-DISTOPT", NombreEquipo: "BALAM" , Img: "odf-sc.png" },
-                                { R3: "2017965", id: 2, UGabinete: "B4", PGabinete: "2", TipoId: 7, Marca: "SC", Tipo: "T-DISTOPT", NombreEquipo: "CONF NIZ 1" , Img: "odf-sc.png" },
-                                { R3: "2195452", id: 3, UGabinete: "B4", PGabinete: "3", TipoId: 7, Marca: "SC", Tipo: "T-DISTOPT", NombreEquipo: "CONF NIZ 2" , Img: "odf-sc.png" }
+                                { R3: "1515067", id: 1, UGabinete: "B4", PGabinete: "1", TipoId: 7, Marca: "SC", Tipo: "T-DISTOPT", NombreEquipo: "BALAM", Img: "odf-sc.png" },
+                                { R3: "2017965", id: 2, UGabinete: "B4", PGabinete: "2", TipoId: 7, Marca: "SC", Tipo: "T-DISTOPT", NombreEquipo: "CONF NIZ 1", Img: "odf-sc.png" },
+                                { R3: "2195452", id: 3, UGabinete: "B4", PGabinete: "3", TipoId: 7, Marca: "SC", Tipo: "T-DISTOPT", NombreEquipo: "CONF NIZ 2", Img: "odf-sc.png" }
                             ]
                         },
                         {
                             nombre: 'B6',
                             idGabinete: 39,
-                            equipos: []
+                            equipos: [
+                                { R3: "1167806", id: 1, UGabinete: "B06", PGabinete: "01", TipoId: 9, Marca: "NIZ-CNC-BNI", Tipo: "T-TOPTICA", NombreEquipo: "FOX 515", Img: 'Fox.png' }
+                            ]
                         },
                         {
                             nombre: 'B7',
@@ -218,7 +224,12 @@ export default {
                         {
                             nombre: 'B9',
                             idGabinete: 42,
-                            equipos: []
+                            equipos: [
+                                { R3: "778296", id: 1, UGabinete: "B09", PGabinete: "01", TipoId: 9, Marca: "NIZ-RMY", Tipo: "T-TOPTICA", NombreEquipo: "FOX 515", Img: 'Fox.png' },
+
+                                { R3: "201595", id: 1, UGabinete: "B09", PGabinete: "02", TipoId: 9, Marca: "NIZ-MPA-PCN", Tipo: "T-TOPTICA", NombreEquipo: "FOX 615", Img: 'Fox.png' }
+
+                            ]
                         },
                         {
                             nombre: 'B10',
