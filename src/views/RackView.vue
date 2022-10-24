@@ -227,7 +227,7 @@ export default {
                             equipos: [
                                 { R3: "778296", id: 1, UGabinete: "B09", PGabinete: "01", TipoId: 9, Marca: "NIZ-RMY", Tipo: "T-TOPTICA", NombreEquipo: "FOX 515", Img: 'Fox.png' },
 
-                                { R3: "201595", id: 1, UGabinete: "B09", PGabinete: "02", TipoId: 9, Marca: "NIZ-MPA-PCN", Tipo: "T-TOPTICA", NombreEquipo: "FOX 615", Img: 'Fox.png' }
+                                { R3: "201595", id: 1, UGabinete: "B09", PGabinete: "02", TipoId: 9, Marca: "NIZ-MPA-PCN", Tipo: "T-TOPTICA", NombreEquipo: "FOX 615", Img: 'Fox615.png' }
 
                             ]
                         },
