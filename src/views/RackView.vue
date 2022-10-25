@@ -249,7 +249,9 @@ export default {
                         {
                             nombre: 'B20',
                             idGabinete: 53,
-                            equipos: []
+                            equipos: [
+                            { R3: "2293907", "id": 1, "UGabinete":"B20", "PGabinete":"01" ,"TipoId": 10 , "Marca":"CISCO", "Tipo":"T-EXTTEL", "NombreEquipo":"EXT 35102", Img: 'telefono.png' }
+                            ]
                         },
                     ]
                 },
